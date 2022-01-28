@@ -58,6 +58,9 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height:1.5;
     font-size:1.6rem;
+    max-width: 1080px; 
+    margin: 0 auto !important; 
+    /* float: none !important;  */
 }
 
 h1, h2, h3, h4, h5 {
@@ -69,12 +72,40 @@ section, footer{
     padding:4% 0;
 }
 .container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
-/*Top Section Styles*/
+/*nav bar*/
 
+nav{
+    display:flex;
+    flex-direction: row; 
+    justify-content: space-between;   
+    align-items: center;
+    width:100%;
+}
+.links{
+    display:flex;
+}
+.links a{
+    padding: 25px 30px;
+    text-decoration: none;
+    color: black;
+}
+.logo img{
+width: 175px;
+vertical-align: middle;
+display:flex;
+justify-content: center;
+}
+
+.img2 img{
+    display:flex;
+    justify-content: flex-end;
+}
+
+/*Top Section Styles*/
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -90,13 +121,20 @@ section, footer{
     padding-bottom: 4%;  
 }
 
+.img3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
+}
+
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
 }
 
 .middle-content h2 {
-    margin-bottom: 0;
+    margin-bottom: 5%;
 }
 
 .middle-content .boxes {
@@ -114,27 +152,189 @@ section, footer{
     justify-content: center;
 }
 
+.boxes{
+    display:flex;
+    justify-content: space-evenly;
+    padding: 10px; 
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.box1{
+    background-color: teal;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box2{
+    background-color: gold; 
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box3{
+    background-color: cadetblue;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box4{
+    background-color: coral;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box5{
+    background-color: crimson;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box6{
+    background-color:forestgreen;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box7{
+    background-color: darkorchid;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box8{
+    background-color: hotpink;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box9{
+    background-color: indigo;
+    padding: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.box10{
+    background-color: dodgerblue;
+    padding: 35.5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 /*Bottom Section Styles*/
 .bottom-content {
     display: flex;
     justify-content: space-between;
+    border-top: 2px solid #ff4b00;
+    align-content: center;
 }
 
-.bottom-content .text-container {
-    width:25%;
-}
 
-.bottom-content .text-container:last-child {
-    padding-right: 0;
-}
 
 /*Footer Styles*/
 footer {
-    width: 100%;
+    width: 90%;
     background-color: #ff4b00;
+    margin:auto;
+}
+footer nav{
+    display:flex;
+    justify-content: space-evenly;
 }
 
 /*About Page Styles*/
+.row{
+display:flex;
+justify-content: space-evenly;
+flex-direction: row;
+padding: 20px;  
+}
+
+.row1{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;   
+    margin: 0 auto; 
+
+}
+.wrap{
+    display: flex;
+    flex-wrap:wrap;
+}
+.abouts{
+    width: 38%;
+    margin: 0 auto;
+}
+
+.worktogether h2{
+ width:85%;
+ margin: 0 auto;
+}
+.worktogether p{
+width:85%;
+margin: 0 auto;
+}
+
 
 
 /*Responsive Styles*/
+
+@media(max-width: 500px){
+    nav{
+        flex-direction: column;
+    }
+    .links{
+        flex-direction: row;
+    }
+    .links a{
+        padding:4px;
+    }
+    .logo img{
+        padding: 7px;
+    }
+    .top-content{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .bottom-content{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bottom-content .text-container{
+        width:90%;
+    } 
+    .top-content .text-container{
+        width:90%;
+        text-align:left;
+    }
+    .text-container h2{
+        text-align: center;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .abouts{
+        width: 100%;
+    }
+    .abouts h2, p{
+        text-align: center;
+    }
+    .abouts button{
+        display: none;
+    }
+    .abouts img{
+        display:block;
+        margin:0 auto;
+    }
+    .worktogether h2{
+        text-align: center;
+    }
+}
+
